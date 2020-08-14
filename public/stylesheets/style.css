@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 20px "Teko", sans-serif !important;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+.front_img {
+  width: auto;
+  height: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.err {
+  color: crimson;
+}

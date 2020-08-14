@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Item: #{item.name} - #{item.description}
+  p Price: $ #{item.price}
+  p In Stock: #{item.numberInStock}
+  
+  p Do you really want to delete this Item?
+    
+    form(method='POST' action='')
+      div.form-group
+        input#itemid.form-control(type='hidden',name='itemid', required='true', value=item._id )
+        input#password(type="password", name="password", placeholder="Enter password to delete")
+      button.btn.btn-danger(type='submit') Delete
+
+      if error
+          p(class="err") Wrong password! Try again.

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= name
+  
+  ul
+    - item_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+    each item in item_list
+      li.m-3
+      if item.image
+        img(src=item.imageUrl, alt="", class="front_img")
+      a.m-3(href=item.url) #{item.name} 
+      |  #{item.category.name}
+
+    else
+      li There are no items.
